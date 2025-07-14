@@ -11,12 +11,13 @@ const PAYU_APIKEY = "4Vj8eK4rloUd272L48hsrarnUA";
 // Configuración de la DB (mismo que docker-compose)
 const AppDataSource = new DataSource({
   type: "postgres",
-  host: "localhost",
+  host: "dpg-d1q9vgjuibrs73eg7k10-a",
   port: 5432,
   username: "payu",
-  password: "payu123",
+  password: "6qbgtn9MQJxlBBrK2Ykl8c8Q7JSOJnB9",
   database: "payudb",
-  synchronize: true,
+  synchronize: false,
+  ssl: { rejectUnauthorized: false },
   logging: false,
   entities: [Transaction],
 });
